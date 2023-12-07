@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.img-container {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.box1 {
+    float: left;
+  width: 33.33%;
+  padding: 50px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.box {
+  float: left;
+  width: 50%;
+  padding: 50px;
+  height: 300px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container .box {
+  background-color: #f1f1f1;
+  width: 50%;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<h2>Grid of Boxes</h2>
+<p>Float boxes side by side:</p>
+
+<div class="clearfix">
+  <div class="box1" style="background-color:#bbb">
+  <p>Some text inside the box.</p>
+  </div>
+  <div class="box1" style="background-color:#ccc">
+  <p>Some text inside the box.</p>
+  </div>
+  <div class="box1" style="background-color:#ddd">
+  <p>Some text inside the box.</p>
+  </div>
+</div>
+<br>
+
+<div class="clearfix">
+    <div class="img-container">
+    <img src="img_5terre_wide.jpg" alt="Italy" style="width:100%">
+    </div>
+    <div class="img-container">
+    <img src="img_tree.jpg" alt="Forest" style="width:100%">
+    </div>
+    <div class="img-container">
+    <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+    </div>
+  </div>
+<br>
+
+  <div class="clearfix">
+    <div class="box" style="background-color:#bbb">
+    <h2>Box 1</h2>
+    <p>Some content, some content, some content</p>
+    </div>
+    <div class="box" style="background-color:#ccc">
+    <h2>Box 2</h2>
+    <p>Some content, some content, some content</p>
+    <p>Some content, some content, some content</p>
+    <p>Some content, some content, some content</p>
+    </div>
+  </div>
+
+<p><strong>Note:</strong> Here, we use the clearfix hack to take care of the layout flow. 
+We also use the box-sizing property to make sure that the box doesn't break due to extra padding. Try to remove this code to see the effect.</p>
+<br>
+
+<h1>Flexible Boxes</h1>
+
+<div class="flex-container">
+  <div class="box">Box 1 - This is some text to make sure that the content gets really tall. This is some text to make sure that the content gets really tall.</div>
+  <div class="box">Box 2 - My height will follow Box 1.</div>
+</div>
+
+<p>Try to resize the browser window to see the flexible layout.</p>
+<p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
+</body>
+</html>
