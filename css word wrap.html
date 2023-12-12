@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+/*p.test {
+  width: 11em; 
+  border: 1px solid #000000;
+  word-wrap: break-word;
+}
+p.test1 {
+  width: 140px; 
+  border: 1px solid #000000;
+  word-break: keep-all;
+}
+
+p.test2 {
+  width: 140px; 
+  border: 1px solid #000000;
+  word-break: break-all;
+}
+p.test3 {
+  writing-mode: horizontal-tb; 
+}
+
+span.test4 {
+  writing-mode: vertical-rl; 
+}
+
+p.test4 {
+  writing-mode: vertical-rl; 
+}
+p {
+  text-align: justify;
+  text-justify: inter-word;
+
+}*/
+
+div.a {
+  white-space: nowrap; 
+  width: 50px; 
+  overflow: hidden;
+  text-overflow: clip; 
+  border: 1px solid #000000;
+}
+
+div.b {
+  white-space: nowrap; 
+  width: 50px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  border: 1px solid #000000;
+}
+
+div.c {
+  white-space: nowrap; 
+  width: 50px; 
+  overflow: hidden;
+  text-overflow: "----"; 
+  border: 1px solid #000000;
+}
+
+</style>
+</head>
+<body>
+
+<!--<h1>The word-wrap Property</h1>
+
+<p class="test">This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
+
+<br><br>
+
+<h1>The word-break Property</h1>
+
+<p class="test1">This paragraph contains some text. This line will-break-at-hyphens.</p>
+
+<p class="test2">This paragraph contains some text. The lines will break at any character.</p>
+<br><br>
+
+<h1>The writing-mode Property</h1>
+
+<p class="test3">Some text with default writing-mode.</p>
+
+<p>Some text with a span element with a <span class="test4">vertical-rl</span> writing-mode.</p>
+
+<p class="test4">Some text with writing-mode: vertical-rl.</p>-->
+
+<h1>The text-overflow Property</h1>
+
+<p>The following two divs contains a text that will not fit in the box.</p>
+
+<h2>text-overflow: clip (default):</h2>
+<div class="a">Hello world!</div>
+
+<h2>text-overflow: ellipsis:</h2>
+<div class="b">Hello world!</div>
+
+<h2>text-overflow: "----" (user defined string):</h2>
+<div class="c">Hello world!</div>
+
+<p><strong>Note:</strong> The text-overflow: "<em>string</em>" only works in 
+Firefox.</p>
+
+
+</body>
+</html>
